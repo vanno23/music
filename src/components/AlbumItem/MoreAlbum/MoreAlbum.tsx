@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { artistDataProps, albumDataProps } from "../AlbumItemType";
 import spotifyApi from "../../../api/spotifyApi";
 import SingleItem from "../../SingleItem/SingleItem";
@@ -72,22 +72,21 @@ const MoreAlbum = ({
     }
   }, [containerRef.current, moreAlbumData, searchedData]);
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (containerRef.current) {
-        const containerWidth: number | undefined = containerRef.current?.clientWidth;
-        setSlidesPerView(calculateSlidesPerView(containerWidth))
-      }
-    };
+  const handleResize = useCallback(() => {
+    if (containerRef.current) {
+      const containerWidth: number | undefined = containerRef.current?.clientWidth;
+      setSlidesPerView(calculateSlidesPerView(containerWidth))
+    }
+  }, [containerRef.current]);
 
+  useEffect(() => {
     handleResize();
     window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-
-  }, [containerRef.current]);
+  }, [handleResize]);
 
   return (
     <>

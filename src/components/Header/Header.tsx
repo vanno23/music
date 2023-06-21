@@ -21,22 +21,6 @@ const Header = () => {
 
   }, [location.pathname]);
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setShowHideNavbar(true);
-      } else {
-        setShowHideNavbar(false);
-      }
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   return (
     <div className='navHeader'>
       <nav className={`nav ${showHideNavbar ? 'showNav' : 'hideNav'}`}>
