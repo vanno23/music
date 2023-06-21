@@ -1,0 +1,318 @@
+@charset "UTF-8";
+.sectionHeader {
+  display: flex;
+  align-items: end;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  font-size: 1rem;
+  padding-bottom: 24px;
+  min-height: 340px;
+  position: relative;
+  color: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding-inline: 32px;
+}
+@media screen and (max-width: 1024px) {
+  .sectionHeader {
+    padding-inline: 24px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sectionHeader {
+    padding-inline: 16px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .sectionHeader {
+    min-height: 280px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .sectionHeader {
+    min-height: 200px;
+    padding: 0 16px 12px 16px;
+    -moz-column-gap: 12px;
+         column-gap: 12px;
+  }
+}
+.sectionHeader .albumImg {
+  z-index: 1;
+  height: 232px;
+  width: 232px;
+}
+@media only screen and (max-width: 1024px) {
+  .sectionHeader .albumImg {
+    height: 172px;
+    width: 172px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .sectionHeader .albumImg {
+    height: 102px;
+    width: 102px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .sectionHeader .albumImg {
+    height: 80px;
+    width: 80px;
+  }
+}
+.sectionHeader .albumImg img {
+  height: 232px;
+  width: 232px;
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (max-width: 1024px) {
+  .sectionHeader .albumImg img {
+    height: 172px;
+    width: 172px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .sectionHeader .albumImg img {
+    height: 102px;
+    width: 102px;
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
+  }
+}
+@media only screen and (max-width: 450px) {
+  .sectionHeader .albumImg img {
+    height: 80px;
+    width: 80px;
+  }
+}
+.sectionHeader .albumImg img.artistImg {
+  border-radius: 50%;
+}
+.sectionHeader .aboutAlbum {
+  z-index: 1;
+}
+.sectionHeader .aboutAlbum .albumType {
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.sectionHeader .aboutAlbum .albumName {
+  margin: 0.08em 0px 0.12em;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+@media only screen and (max-width: 600px) {
+  .sectionHeader .aboutAlbum .albumName {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+.sectionHeader .aboutAlbum .followers {
+  font-size: 0.875rem;
+}
+.sectionHeader .aboutAlbum .headerDetails {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+}
+@media only screen and (max-width: 450px) {
+  .sectionHeader .aboutAlbum .headerDetails {
+    font-size: 0.75rem;
+  }
+}
+.sectionHeader .aboutAlbum .headerDetails .artistName {
+  font-weight: 700;
+}
+.sectionHeader .aboutAlbum .headerDetails .artistName:hover {
+  text-decoration: underline;
+}
+.sectionHeader .aboutAlbum .headerDetails .artistImg {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (max-width: 450px) {
+  .sectionHeader .aboutAlbum .headerDetails .artistImg {
+    margin-right: 2px;
+  }
+}
+.sectionHeader .aboutAlbum .headerDetails span::before {
+  content: "•";
+  margin: 0px 4px;
+}
+.sectionHeader .aboutAlbum .headerDetails .duration {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+.sectionHeader::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(transparent 0, rgba(0, 0, 0, 0.5));
+}
+
+.trackHeader {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  position: absolute;
+  padding-inline: 32px;
+}
+@media screen and (max-width: 1024px) {
+  .trackHeader {
+    padding-inline: 24px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .trackHeader {
+    padding-inline: 16px;
+  }
+}
+.trackHeader .followBtn {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  background-color: transparent;
+  border: 1px solid hsla(0, 0%, 100%, 0.3);
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+}
+.trackHeader .followBtn div {
+  padding: 7px 15px;
+}
+@media only screen and (max-width: 600px) {
+  .trackHeader .followBtn div {
+    padding: 5px 12px;
+    font-size: 10px;
+  }
+}
+.trackHeader .followBtn:hover {
+  border-color: #fff;
+}
+.trackHeader .startAlbum {
+  border-radius: 50%;
+  background-color: #1ed760;
+}
+.trackHeader .startAlbum:hover {
+  background-color: #1fdf64;
+  transform: scale(1.05);
+}
+.trackHeader .startAlbum button {
+  cursor: pointer;
+  padding: 18px;
+  transform: rotate(90deg);
+  font-size: 1.3rem;
+}
+@media only screen and (max-width: 1024px) {
+  .trackHeader .startAlbum button {
+    padding: 14px;
+  }
+}
+.trackHeader .albumFavorite button {
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: hsla(0, 0%, 100%, 0.7);
+}
+.trackHeader .albumFavorite button.saved {
+  color: #1ed760 !important;
+}
+.trackHeader .albumFavorite button .headrtIcons {
+  display: flex;
+}
+.trackHeader .albumFavorite button:hover {
+  color: #fff;
+}
+.trackHeader .startAlbum button,
+.trackHeader .albumFavorite button {
+  border: none;
+  display: flex;
+  background-color: transparent;
+}
+
+.albumTrack {
+  position: relative;
+}
+.albumTrack .albumTrackHeader {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 232px;
+}
+.albumTrack .albumTrackHeader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6) 0, #121212 100%);
+}
+
+.trackArtistContainer {
+  display: flex;
+  justify-content: end;
+}
+@media only screen and (max-width: 1650px) {
+  .trackArtistContainer {
+    justify-content: start;
+  }
+}
+.trackArtistContainer .trackArtist {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  width: 400px;
+  margin-right: 200px;
+  text-transform: capitalize;
+  color: white;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 100px;
+}
+@media only screen and (max-width: 1650px) {
+  .trackArtistContainer .trackArtist {
+    padding-inline: 32px;
+    margin-top: 100px;
+    margin-bottom: 35px;
+  }
+}
+@media only screen and (max-width: 1650px) and (max-width: 1024px) {
+  .trackArtistContainer .trackArtist {
+    padding-inline: 24px;
+  }
+}
+@media only screen and (max-width: 1650px) and (max-width: 600px) {
+  .trackArtistContainer .trackArtist {
+    padding-inline: 16px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .trackArtistContainer .trackArtist {
+    margin-top: 80px;
+  }
+}
+.trackArtistContainer .trackArtist .trackArtistName:hover {
+  text-decoration: underline;
+}
+.trackArtistContainer .trackArtist:hover {
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+.trackArtistContainer .trackArtist img {
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=SectionHeader.css.map */

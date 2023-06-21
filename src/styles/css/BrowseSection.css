@@ -1,0 +1,33 @@
+.browseTitle {
+  color: white;
+}
+
+.browseItems {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 24px;
+}
+.browseItems a {
+  background-color: aqua;
+  position: relative;
+  overflow: hidden;
+  padding-top: 95%;
+  border-radius: 8px;
+}
+.browseItems a img {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  right: 0;
+  bottom: 0;
+  transform: rotate(25deg) translate(18%, -2%);
+}
+.browseItems a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  padding: 16px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}/*# sourceMappingURL=BrowseSection.css.map */

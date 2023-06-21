@@ -1,0 +1,11 @@
+.HomeContainer .homeItemHeader {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.HomeContainer .homeItem {
+  margin-bottom: 1.5rem;
+}/*# sourceMappingURL=HomeContainer.css.map */

@@ -1,0 +1,158 @@
+@use '../../styles/scss/variables' as *;
+@use '../../styles/scss/media' as *;
+
+.navHeader {
+  width: 100%;
+  color: white;
+  grid-area: left-sidebar;
+  .nav {
+    width: 320px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    row-gap: 8px;
+    height: calc(100% - 24px);
+    transition: .4s;
+
+    @include tablet {
+      width: 80px;
+      background-color: $body-bg;
+      overflow: hidden;
+      &.showNav {
+        width: 320px;
+
+        .show-hide-navbar {
+          display: flex;
+          justify-content: end;
+          .icon {
+            color: white;
+            transform: rotate(180deg);
+          }
+        }
+      }
+      &.hideNav {
+        .findSongs {
+          display: none;
+        }
+        a {
+         .navUlTitle {
+          display: none;
+         } 
+        }
+      }
+    }
+
+    @include mobile {
+      width: 80px;
+      &.showNav {
+        width: 230px;
+      }
+    }
+
+    .findSongs {
+      width: 290px;
+      overflow: hidden;
+      background-color: #242424;
+      border-radius: 8px;
+      margin: 8px auto;
+      padding: 16px 20px;
+      .findSongsHeader {
+        p:nth-child(1) {
+          font-size: 1rem;
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+        p:nth-child(2) {
+          font-size: 0.875rem;
+        }
+      }
+      .findSongsLink {
+        margin-top: 20px;
+        a {
+          background-color: white;
+          font-size: .875rem;
+          color: black;
+          border-radius: 500px;
+          font-weight: 700;
+          padding: 8px 16px;
+          &:hover {
+            padding: 9px 17px;
+          }
+        }
+      }
+    }
+  }
+
+  .navUl {
+    padding: 8px 12px;
+    .show-hide-navbar {
+      .icon {
+        display: none;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        color: #b3b3b3;
+        font-size: 1.6rem;
+        transition: .4s;
+        @include tablet {
+          font-size: 2.5rem;
+          display: block;
+        }
+      }
+    }
+    li {
+      padding: 4px 12px;
+      
+      a {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        color: #b3b3b3;
+
+        &.iconTrue {
+          color: white !important;
+
+          button span {
+            color: white;
+          }
+        }
+        button {
+          cursor: pointer;
+          border: none;
+          background-color: transparent;
+          span {
+            color: #b3b3b3;
+            font-size: 1.6rem;
+            transition: .4s;
+            
+            @include tablet {
+              font-size: 2.5rem;
+            }
+          }
+        }
+        span {
+          font-weight: 700;
+          font-size: 1rem;
+        }
+
+        transition: .4s;
+        &:hover {
+          color: white;
+          button span {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .navUl, .headerLibrary {
+    background-color: $body-bg;
+    border-radius: $mainPage-borderRadius;
+  }
+  
+  .headerLibrary {
+    height: 100%;
+  }
+}

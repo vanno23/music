@@ -1,0 +1,44 @@
+.popularTracksContainer {
+  padding-inline: 32px;
+}
+@media screen and (max-width: 1024px) {
+  .popularTracksContainer {
+    padding-inline: 24px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .popularTracksContainer {
+    padding-inline: 16px;
+  }
+}
+.popularTracksContainer.pageArtist {
+  margin-right: 250px;
+}
+@media only screen and (max-width: 1024px) {
+  .popularTracksContainer.pageArtist {
+    margin-right: 0;
+  }
+}
+.popularTracksContainer .popularTracksHeader h5 {
+  font-size: 0.875rem;
+  color: #b3b3b3;
+}
+.popularTracksContainer .popularTracksHeader .artistPopular {
+  margin-bottom: 5px;
+}
+.popularTracksContainer .popularTracksHeader h2 {
+  margin: 5px 0 20px;
+  font-size: 1.5rem;
+  color: white;
+}
+.popularTracksContainer .toggleItem {
+  background: none;
+  border: none;
+  color: hsla(0, 0%, 100%, 0.7);
+  padding: 16px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.popularTracksContainer .toggleItem:hover {
+  color: white;
+}/*# sourceMappingURL=PopularTracksByArtist.css.map */

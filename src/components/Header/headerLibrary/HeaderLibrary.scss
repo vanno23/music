@@ -1,0 +1,57 @@
+@use '../../../styles/scss/media' as *;
+
+.libraryTypes {
+  margin: 8px 16px;
+
+  &.libraryTypesHide {
+    display: none;
+  }
+  
+  .activeButtonHeader {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    .closeActiveHeader {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: #252525;
+      font-size: 1.4rem;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      color: #b3b3b3;
+      transition: .2s;
+      
+      &:hover {
+        background: #282828;
+      }
+    }
+  }
+  .headerLibrarySlide {
+    width: auto;
+  }
+  .uniqueButton {
+    cursor: pointer;
+    color: white;
+    padding: 8px 13px;
+    border: none;
+    border-radius: 500px;
+    font-size: 14px;
+    background: #252525;
+    transition: .2s;
+    text-transform: capitalize;
+    color: white;
+
+    &.libraryActiveButton {
+      background-color: white;
+      color: black;
+    }
+    span {
+      font-size: 0.875rem;
+    }
+  }
+}
+

@@ -1,0 +1,45 @@
+@use '../../../styles/scss/variables' as *;
+@use '../../../styles/scss/media' as *;
+
+.ArtistMoreAlbum {
+  margin-top: 30px;
+  @include mobile {
+    margin-top: 15px;
+  }
+  .discography {
+    margin-bottom: 25px;
+    padding-inline: $contentSpacing;
+  
+  
+    .discographyBtns {
+      margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      @include mobile {
+        margin-top: 10px;
+      }
+      button {
+        cursor: pointer;
+        color: white;
+        font-size: 0.875rem;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 40px;
+        background: hsla(0,0%,100%,.07);
+        transition: .2s;
+        @include mobile {
+          padding: 8px 10px;
+        }
+    
+        &:hover {
+          background: hsla(0,0%,100%,.09);
+        }
+        &.active {
+          color: black;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}

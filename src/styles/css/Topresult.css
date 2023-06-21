@@ -1,0 +1,47 @@
+.topResult .topResultTitle {
+  margin-bottom: 16px;
+  color: white;
+  font-size: 1.5rem;
+}
+.topResult .topResultContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background: #181818;
+  transition: 0.4s;
+}
+.topResult .topResultContainer:hover {
+  background: #282828;
+}
+.topResult .topResultContainer .topResultImg img {
+  width: 92px;
+  height: 92px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+.topResult .topResultContainer .topResultDetails .topResultName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 2rem;
+  font-weight: 700;
+}
+@media only screen and (max-width: 1550px) {
+  .topResult .topResultContainer .topResultDetails .topResultName {
+    font-size: 1.5rem;
+  }
+}
+.topResult .topResultContainer .topResultDetails .topResultType {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 500px;
+  padding: 4px 12px;
+  text-transform: capitalize;
+  display: inline-block;
+}/*# sourceMappingURL=Topresult.css.map */

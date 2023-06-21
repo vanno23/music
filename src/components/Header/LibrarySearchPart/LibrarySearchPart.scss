@@ -1,0 +1,169 @@
+.LibrarySearchPart {
+  padding-inline: 16px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+
+  &.LibrarySearchPartHide {
+    .LibrarySearchHeader {
+      display: none;
+    }
+    .sortedLibrary {
+      display: none;
+    }
+  }
+  .LibrarySearchHeader{
+    width: 188px;
+    position: relative;
+    height: 30px;
+    &.activeSearch {
+      input {
+        width: 100%;
+        background-color: hsla(0,0%,100%,.1);
+      }
+      
+      .LibrarySearchButton:hover {
+        background-color: transparent;
+      }
+    }
+    input {
+      transition: .2s;
+      background-color: transparent;
+      border: none;
+      width: 0;
+      height: 100%;
+      border-radius: 4px;
+      padding: 8px 32px;
+      color: hsla(0,0%,100%,.7);
+      font-size: .75rem;
+      outline: none;
+
+      &::placeholder {
+        color: hsla(0,0%,100%,.7);
+      }
+    }
+    .LibrarySearchButton {
+      cursor: pointer;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background-color: transparent;
+      color: hsla(0,0%,100%,.7);
+      font-size: 1.2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 100%;
+      padding-left: 2px;
+
+      &:hover {
+        border-radius: 50%;
+        background-color: hsla(0,0%,100%,.1);
+      }
+    }
+
+    .deleteSearchValue {
+      border: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 5px;
+      display: none;
+      background-color: transparent;
+      color: hsla(0,0%,100%,.7);
+      font-size: 1.2rem;
+      &.activeDeleteSearchValue {
+        display: flex;
+      }
+    }
+  }
+
+  .sortedLibrary {
+    position: relative;
+    .sortedLibraryHeader {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      color: hsla(0,0%,100%,.7);
+      padding-inline-end: 8px;
+      padding-inline-start: 12px;
+      height: 32px;
+      font-size: 0.825rem;
+      
+      &:hover {
+        color: #fff;
+      }
+      .sortedLibraryIcon{
+        font-size: 1.5rem;
+        transform: rotate(180deg);
+
+        &.activeSortedLibraryIcon {
+          transform: rotate(0);
+        }
+      }
+    }
+    .sortedLibraryData {
+      display: none;
+      background-color: #282828;
+      position: absolute;
+      flex-direction: column;
+      box-shadow: 0 16px 24px rgba(0,0,0,.3), 0 6px 8px rgba(0,0,0,.2);
+      max-width: 450px;
+      min-width: 160px;
+      padding: 4px;
+      border-radius: 4px;
+
+      &.activeSortedLibraryData {
+        display: flex;
+      }
+      ul {
+        li {
+          &.sortedLibraryDataTitle {
+            font-size: .685rem;
+            padding: 12px;
+            color: hsla(0,0%,100%,.6);
+            letter-spacing: 1px;
+          }
+
+          &.activeSortedLibraryButton {
+            color: #1ed760;
+            button {
+              color: #1ed760;
+              &:hover {
+                color: #1ed760;
+              }
+            }
+          }
+
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: none;
+            background-color: transparent;
+            width: 100%;
+            height: 44px;
+            padding: 12px;
+            padding-inline-end: 8px;
+            font-size: 0.825rem;
+            border-radius: 2px;
+            color: hsla(0,0%,100%,.9);
+
+            .sortedLibraryCheckIcon {
+              font-size: 1.3rem;
+            }
+
+            &:hover {
+              color: white;
+              background-color: hsla(0,0%,100%,.1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

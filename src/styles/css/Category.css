@@ -1,0 +1,36 @@
+.category {
+  padding-inline: 2rem;
+}
+.category .categoryTitle {
+  color: white;
+  margin-bottom: 1rem;
+}
+.category .categoryContainer {
+  display: grid;
+  gap: 24px;
+}
+.category .categoryContainer .item {
+  position: relative;
+}
+.category .categoryContainer .item .backgroundCategory {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.category .categoryContainer .item .itemTitle {
+  width: 100%;
+  color: white;
+  position: absolute;
+  top: 20px;
+  padding-inline: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}/*# sourceMappingURL=Category.css.map */

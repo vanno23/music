@@ -1,0 +1,74 @@
+.libraryData {
+  margin-inline: 8px;
+
+  .libraryDataItem {
+    height: 64px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 13px;
+    padding: 8px;
+    border-radius: 6px;
+
+
+    &.activeLibraryDataItem {
+      background-color: hsla(0,0%,100%,.07);
+
+      &:hover {
+        background-color: hsla(0,0%,100%, .15);
+      }
+    }
+
+    &:hover {
+      background-color: #1c1c1c;
+    }
+
+    .libraryDataImg {
+      width: 48px;
+      height: 48px;
+      border-radius: 5px;
+      
+      img {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        border-radius: 3px;
+        &.libraryArtistImg {
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .libraryDataDetails {
+      width: 100%;
+      overflow: hidden;
+      .libraryDataName {
+        font-size: .92rem;
+        font-weight: 700;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        .searchedLetter {
+          background-color: #2e77d0;
+          border-radius: 4px;
+          color: #fff;
+        }
+      }
+
+      .libraryDataType,
+      .libraryDataArtistName {
+        text-transform: capitalize;
+        color: #a7a7a7;
+        font-size: .85rem;
+      }
+
+      .libraryDataArtistName {
+        &::before {
+          content: "•";
+          margin: 0px 4px;
+        }
+      }
+    }
+  }
+}

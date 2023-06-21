@@ -1,0 +1,199 @@
+@use '../../styles/scss/mixin' as *;
+@use '../../styles/scss/media' as *;
+
+.trackItem {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  height: 56px;
+  padding-inline: 16px;
+  @include mobile {
+    height: 50px;
+    padding-inline: 0;
+  }
+
+  &:hover {
+    background-color: hsla(0, 0%, 100%, .1);
+
+    .trackFavorite button {
+      opacity: 1 !important;
+    }
+
+    .startTrackBtn {
+      .index {
+        display: none;
+      }
+
+      button {
+        display: flex !important;
+      }
+
+    }
+    .searchTrackIcon button {
+      display: block !important;
+    }
+  }
+
+  .aboutTrack {
+    color: white;
+    display: grid;
+    grid-template-columns: 16px minmax(0, 4fr) minmax(120px, 1fr);
+    align-items: center;
+    column-gap: 16px;
+    flex: 1;
+    @include tablet {
+      grid-template-columns: 16px minmax(0, 4fr) minmax(45px, 1fr);
+      column-gap: 6px;
+    }
+
+    &.playlistContainer {
+      display: grid;
+      grid-template-columns: minmax(0, 16px) minmax(0, 6fr)  minmax(0, 4fr) minmax(0, 3fr) minmax(120px, 1fr);
+      @include tablet {
+        grid-template-columns: minmax(0, 16px) minmax(0, 6fr)  minmax(0, 4fr) minmax(0, 3fr) minmax(45px, 1fr);
+        column-gap: 6px;
+      }
+    }
+
+    &.searchTracksContainer {
+      display: grid;
+      grid-template-columns: 16px minmax(0, 4fr) minmax(0, 2fr) minmax(120px, 1fr);
+      @include tablet {
+        grid-template-columns: 16px minmax(0, 4fr) minmax(0, 2fr) minmax(45px, 1fr);
+        column-gap: 6px;
+      }
+    }
+
+    &.searchTrackPage {
+      grid-template-columns: minmax(0, 4fr) minmax(120px, 1fr);
+      @include tablet {
+        grid-template-columns: minmax(0, 4fr) minmax(45px, 1fr);
+        column-gap: 6px;
+      }
+    }
+
+
+    .startTrackBtn {
+      width: 16px;
+
+      .index {
+        color: #a7a7a7;
+      }
+
+      button {
+        border: none;
+        display: none;
+        background-color: transparent;
+        color: white;
+        font-size: .8rem;
+        transform: rotate(90deg);
+      }
+
+      &.searchTrack {
+        display: none;
+      }
+    }
+
+    .trackName {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+      flex: 1;
+
+      .trackImage {
+        position: relative;
+        height: 40px;
+        button {
+          display: none;
+        }
+        img {
+          height: 100%;
+          width: 40px;
+        }
+      }
+
+
+      a {
+        color: white;
+        @include createEllipsis;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .artistName {
+        @include createEllipsis;
+        font-size: 0.875rem;
+        color: #a7a7a7;
+      }
+    }
+
+    .albumName, .formatDate {
+      font-size: 0.875rem;
+      color: #a7a7a7;
+      p{
+        @include createEllipsis;
+      }
+    }
+
+    .trackTime {
+      display: flex;
+      align-items: center;
+      justify-self: flex-end;
+      column-gap: 25px;
+
+      .trackFavorite button {
+        border: none;
+        display: flex;
+        background-color: transparent;
+        font-size: 1.2rem;
+        color: hsla(0, 0%, 100%, .7);
+        opacity: 0;
+
+        &.saved {
+          color: #1ed760 !important;
+        }
+
+        &:hover {
+          color: #fff;
+        }
+      }
+
+      .trackDurarion {
+        font-size: 0.875rem;
+        color: #a7a7a7;
+      }
+    }
+  }
+
+  &.searchTrack {
+    .startTrackBtn {
+      display: none;
+    }
+    .trackImage button {
+      width: 16px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: none;
+      display: none;
+      background-color: transparent;
+      color: white;
+      font-size: .8rem;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    &:hover {
+      .trackImage {
+        img {
+          opacity: .4;
+        }
+        button {
+          display: block;
+        }
+      }
+    }
+  }
+}
+

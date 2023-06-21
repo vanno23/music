@@ -1,0 +1,17 @@
+@use '../../styles/scss/variables' as *;
+
+.HomeContainer {  
+  .homeItemHeader{
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .homeItem {
+    margin-bottom: 1.5rem;
+  }
+}

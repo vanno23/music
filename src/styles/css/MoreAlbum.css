@@ -1,0 +1,29 @@
+.paddingContainer {
+  padding-inline: 32px;
+}
+@media screen and (max-width: 1024px) {
+  .paddingContainer {
+    padding-inline: 24px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .paddingContainer {
+    padding-inline: 16px;
+  }
+}
+
+.swiperSlide {
+  width: 100%;
+}
+
+.title {
+  display: flex;
+}
+.title h2 {
+  cursor: pointer;
+  margin: 2rem 0 1rem;
+  color: #fff;
+}
+.title h2:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=MoreAlbum.css.map */

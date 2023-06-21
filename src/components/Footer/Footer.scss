@@ -1,0 +1,74 @@
+@use '../../styles/scss/mixin' as *;
+
+.footer {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  @include containerPadding;
+
+  .footerSocial {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #494949;
+    padding-bottom: 1rem;
+
+    .footerSocialAbout {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      .footerSocialAboutTitles {
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      ul li {
+        margin: 8px 0px;
+
+        a {
+          color: #a7a7a7;
+        }
+      }
+    }
+
+    .footerSocialIcons {
+      display: flex;
+      column-gap: 16px;
+      a {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        display: inline-flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        background-color: rgb(41, 41, 41);
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .footerPrivacy {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    .footerPrivacyLeftSide {
+      display: flex;
+      column-gap: 15px;
+
+    }
+
+    a{
+      color: #a7a7a7;
+      font-size: .875rem;
+    }
+
+    p {
+      font-size: .875rem;
+      color: #a7a7a7;
+    }
+  }
+}

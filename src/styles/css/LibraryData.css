@@ -1,0 +1,65 @@
+@charset "UTF-8";
+.libraryData {
+  margin-inline: 8px;
+}
+.libraryData .libraryDataItem {
+  height: 64px;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 13px;
+       column-gap: 13px;
+  padding: 8px;
+  border-radius: 6px;
+}
+.libraryData .libraryDataItem.activeLibraryDataItem {
+  background-color: hsla(0, 0%, 100%, 0.07);
+}
+.libraryData .libraryDataItem.activeLibraryDataItem:hover {
+  background-color: hsla(0, 0%, 100%, 0.15);
+}
+.libraryData .libraryDataItem:hover {
+  background-color: #1c1c1c;
+}
+.libraryData .libraryDataItem .libraryDataImg {
+  width: 48px;
+  height: 48px;
+  border-radius: 5px;
+}
+.libraryData .libraryDataItem .libraryDataImg img {
+  width: 48px;
+  height: 48px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+}
+.libraryData .libraryDataItem .libraryDataImg img.libraryArtistImg {
+  border-radius: 50%;
+}
+.libraryData .libraryDataItem .libraryDataDetails {
+  width: 100%;
+  overflow: hidden;
+}
+.libraryData .libraryDataItem .libraryDataDetails .libraryDataName {
+  font-size: 0.92rem;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.libraryData .libraryDataItem .libraryDataDetails .libraryDataName .searchedLetter {
+  background-color: #2e77d0;
+  border-radius: 4px;
+  color: #fff;
+}
+.libraryData .libraryDataItem .libraryDataDetails .libraryDataType,
+.libraryData .libraryDataItem .libraryDataDetails .libraryDataArtistName {
+  text-transform: capitalize;
+  color: #a7a7a7;
+  font-size: 0.85rem;
+}
+.libraryData .libraryDataItem .libraryDataDetails .libraryDataArtistName::before {
+  content: "•";
+  margin: 0px 4px;
+}/*# sourceMappingURL=LibraryData.css.map */

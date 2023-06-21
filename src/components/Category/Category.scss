@@ -1,0 +1,41 @@
+@use '../../styles/scss/media' as *;
+@use '../../styles/scss/mixin' as *;
+
+.category {
+  padding-inline: 2rem;
+
+  .categoryTitle{
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  .categoryContainer {
+    display: grid;
+    gap: 24px;
+  
+    .item {
+      position: relative;
+  
+      .backgroundCategory {
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-top: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    
+      .itemTitle{
+        width: 100%;
+        color: white;
+        position: absolute;
+        top: 20px;
+        padding-inline: 10px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        @include createEllipsis;
+      }
+    }
+  }
+}

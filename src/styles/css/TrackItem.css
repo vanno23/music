@@ -1,0 +1,182 @@
+.trackItem {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  height: 56px;
+  padding-inline: 16px;
+}
+@media only screen and (max-width: 600px) {
+  .trackItem {
+    height: 50px;
+    padding-inline: 0;
+  }
+}
+.trackItem:hover {
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+.trackItem:hover .trackFavorite button {
+  opacity: 1 !important;
+}
+.trackItem:hover .startTrackBtn .index {
+  display: none;
+}
+.trackItem:hover .startTrackBtn button {
+  display: flex !important;
+}
+.trackItem:hover .searchTrackIcon button {
+  display: block !important;
+}
+.trackItem .aboutTrack {
+  color: white;
+  display: grid;
+  grid-template-columns: 16px minmax(0, 4fr) minmax(120px, 1fr);
+  align-items: center;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  flex: 1;
+}
+@media only screen and (max-width: 1024px) {
+  .trackItem .aboutTrack {
+    grid-template-columns: 16px minmax(0, 4fr) minmax(45px, 1fr);
+    -moz-column-gap: 6px;
+         column-gap: 6px;
+  }
+}
+.trackItem .aboutTrack.playlistContainer {
+  display: grid;
+  grid-template-columns: minmax(0, 16px) minmax(0, 6fr) minmax(0, 4fr) minmax(0, 3fr) minmax(120px, 1fr);
+}
+@media only screen and (max-width: 1024px) {
+  .trackItem .aboutTrack.playlistContainer {
+    grid-template-columns: minmax(0, 16px) minmax(0, 6fr) minmax(0, 4fr) minmax(0, 3fr) minmax(45px, 1fr);
+    -moz-column-gap: 6px;
+         column-gap: 6px;
+  }
+}
+.trackItem .aboutTrack.searchTracksContainer {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 4fr) minmax(0, 2fr) minmax(120px, 1fr);
+}
+@media only screen and (max-width: 1024px) {
+  .trackItem .aboutTrack.searchTracksContainer {
+    grid-template-columns: 16px minmax(0, 4fr) minmax(0, 2fr) minmax(45px, 1fr);
+    -moz-column-gap: 6px;
+         column-gap: 6px;
+  }
+}
+.trackItem .aboutTrack.searchTrackPage {
+  grid-template-columns: minmax(0, 4fr) minmax(120px, 1fr);
+}
+@media only screen and (max-width: 1024px) {
+  .trackItem .aboutTrack.searchTrackPage {
+    grid-template-columns: minmax(0, 4fr) minmax(45px, 1fr);
+    -moz-column-gap: 6px;
+         column-gap: 6px;
+  }
+}
+.trackItem .aboutTrack .startTrackBtn {
+  width: 16px;
+}
+.trackItem .aboutTrack .startTrackBtn .index {
+  color: #a7a7a7;
+}
+.trackItem .aboutTrack .startTrackBtn button {
+  border: none;
+  display: none;
+  background-color: transparent;
+  color: white;
+  font-size: 0.8rem;
+  transform: rotate(90deg);
+}
+.trackItem .aboutTrack .startTrackBtn.searchTrack {
+  display: none;
+}
+.trackItem .aboutTrack .trackName {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  flex: 1;
+}
+.trackItem .aboutTrack .trackName .trackImage {
+  position: relative;
+  height: 40px;
+}
+.trackItem .aboutTrack .trackName .trackImage button {
+  display: none;
+}
+.trackItem .aboutTrack .trackName .trackImage img {
+  height: 100%;
+  width: 40px;
+}
+.trackItem .aboutTrack .trackName a {
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.trackItem .aboutTrack .trackName a:hover {
+  text-decoration: underline;
+}
+.trackItem .aboutTrack .trackName .artistName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  color: #a7a7a7;
+}
+.trackItem .aboutTrack .albumName, .trackItem .aboutTrack .formatDate {
+  font-size: 0.875rem;
+  color: #a7a7a7;
+}
+.trackItem .aboutTrack .albumName p, .trackItem .aboutTrack .formatDate p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.trackItem .aboutTrack .trackTime {
+  display: flex;
+  align-items: center;
+  justify-self: flex-end;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+.trackItem .aboutTrack .trackTime .trackFavorite button {
+  border: none;
+  display: flex;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: hsla(0, 0%, 100%, 0.7);
+  opacity: 0;
+}
+.trackItem .aboutTrack .trackTime .trackFavorite button.saved {
+  color: #1ed760 !important;
+}
+.trackItem .aboutTrack .trackTime .trackFavorite button:hover {
+  color: #fff;
+}
+.trackItem .aboutTrack .trackTime .trackDurarion {
+  font-size: 0.875rem;
+  color: #a7a7a7;
+}
+.trackItem.searchTrack .startTrackBtn {
+  display: none;
+}
+.trackItem.searchTrack .trackImage button {
+  width: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: none;
+  display: none;
+  background-color: transparent;
+  color: white;
+  font-size: 0.8rem;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.trackItem.searchTrack:hover .trackImage img {
+  opacity: 0.4;
+}
+.trackItem.searchTrack:hover .trackImage button {
+  display: block;
+}/*# sourceMappingURL=TrackItem.css.map */

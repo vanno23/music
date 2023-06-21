@@ -1,0 +1,144 @@
+.navHeader {
+  width: 100%;
+  color: white;
+  grid-area: left-sidebar;
+}
+.navHeader .nav {
+  width: 320px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  row-gap: 8px;
+  height: calc(100% - 24px);
+  transition: 0.4s;
+}
+@media only screen and (max-width: 1024px) {
+  .navHeader .nav {
+    width: 80px;
+    background-color: #121212;
+    overflow: hidden;
+  }
+  .navHeader .nav.showNav {
+    width: 320px;
+  }
+  .navHeader .nav.showNav .show-hide-navbar {
+    display: flex;
+    justify-content: end;
+  }
+  .navHeader .nav.showNav .show-hide-navbar .icon {
+    color: white;
+    transform: rotate(180deg);
+  }
+  .navHeader .nav.hideNav .findSongs {
+    display: none;
+  }
+  .navHeader .nav.hideNav a .navUlTitle {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .navHeader .nav {
+    width: 80px;
+  }
+  .navHeader .nav.showNav {
+    width: 230px;
+  }
+}
+.navHeader .nav .findSongs {
+  width: 290px;
+  overflow: hidden;
+  background-color: #242424;
+  border-radius: 8px;
+  margin: 8px auto;
+  padding: 16px 20px;
+}
+.navHeader .nav .findSongs .findSongsHeader p:nth-child(1) {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.navHeader .nav .findSongs .findSongsHeader p:nth-child(2) {
+  font-size: 0.875rem;
+}
+.navHeader .nav .findSongs .findSongsLink {
+  margin-top: 20px;
+}
+.navHeader .nav .findSongs .findSongsLink a {
+  background-color: white;
+  font-size: 0.875rem;
+  color: black;
+  border-radius: 500px;
+  font-weight: 700;
+  padding: 8px 16px;
+}
+.navHeader .nav .findSongs .findSongsLink a:hover {
+  padding: 9px 17px;
+}
+.navHeader .navUl {
+  padding: 8px 12px;
+}
+.navHeader .navUl .show-hide-navbar .icon {
+  display: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: #b3b3b3;
+  font-size: 1.6rem;
+  transition: 0.4s;
+}
+@media only screen and (max-width: 1024px) {
+  .navHeader .navUl .show-hide-navbar .icon {
+    font-size: 2.5rem;
+    display: block;
+  }
+}
+.navHeader .navUl li {
+  padding: 4px 12px;
+}
+.navHeader .navUl li a {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  color: #b3b3b3;
+  transition: 0.4s;
+}
+.navHeader .navUl li a.iconTrue {
+  color: white !important;
+}
+.navHeader .navUl li a.iconTrue button span {
+  color: white;
+}
+.navHeader .navUl li a button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.navHeader .navUl li a button span {
+  color: #b3b3b3;
+  font-size: 1.6rem;
+  transition: 0.4s;
+}
+@media only screen and (max-width: 1024px) {
+  .navHeader .navUl li a button span {
+    font-size: 2.5rem;
+  }
+}
+.navHeader .navUl li a span {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.navHeader .navUl li a:hover {
+  color: white;
+}
+.navHeader .navUl li a:hover button span {
+  color: white;
+}
+.navHeader .navUl, .navHeader .headerLibrary {
+  background-color: #121212;
+  border-radius: 8px;
+}
+.navHeader .headerLibrary {
+  height: 100%;
+}/*# sourceMappingURL=Header.css.map */

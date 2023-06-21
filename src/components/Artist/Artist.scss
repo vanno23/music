@@ -1,0 +1,9 @@
+@use '../../styles/scss/variables' as *;
+
+.artist {
+  color: white;
+
+  .PopularTracksMg {
+    margin-top: 110px;
+  }
+}

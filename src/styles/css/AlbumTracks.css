@@ -1,0 +1,52 @@
+.trackContainer {
+  padding-inline: 32px;
+  margin-top: 110px;
+}
+.trackContainer.searchTracksContainer {
+  padding-inline: 0;
+  margin-top: 0;
+}
+.trackContainer.searchTracksContainer .trackHeaderTitle {
+  grid-template-columns: 16px minmax(0, 6fr) minmax(0, 4fr) minmax(0, 3fr) minmax(45px, 1fr);
+}
+.trackContainer .trackHeaderTitle {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 16px minmax(0, 6fr) minmax(0, 4fr) minmax(0, 3fr) minmax(45px, 1fr);
+  padding-inline: 16px;
+  color: #a7a7a7;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+@media only screen and (max-width: 1024px) {
+  .trackContainer .trackHeaderTitle {
+    -moz-column-gap: 6px;
+         column-gap: 6px;
+  }
+}
+.trackContainer .trackHeaderTitle.albumPageHeaderTitle {
+  grid-template-columns: 16px minmax(0, 4fr) minmax(45px, 1fr);
+}
+.trackContainer .trackHeaderTitle.searchTracksPageHeaderTitle {
+  grid-template-columns: 16px minmax(0, 4fr) minmax(0, 2fr) minmax(45px, 1fr);
+}
+.trackContainer .trackHeaderTitle div {
+  font-size: 0.875rem;
+  font-weight: 700;
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+.trackContainer .trackHeaderTitle .clock {
+  justify-self: end;
+}
+.trackContainer .trackHeaderTitle .clock button {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: #a7a7a7;
+}/*# sourceMappingURL=AlbumTracks.css.map */

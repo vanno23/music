@@ -1,0 +1,38 @@
+@use '../../styles/scss/variables' as *;
+@use '../../styles/scss/mixin' as *;
+.albumByTrack {
+  margin-top: 40px;
+  @include containerPadding;
+  .albumByTrackHeader {
+    cursor: pointer;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: hsla(0,0%,100%,.1);
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    color: white;
+    margin-bottom: 2px;
+
+    &:hover {
+      background-color: hsla(0,0%,100%,.3);
+    }
+
+    img {
+      border-top-left-radius: 8px;
+      width: 80px;
+    }
+    p {
+      font-size: 0.6875rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+      font-weight: 700;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

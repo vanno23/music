@@ -1,0 +1,21 @@
+.showAllSection {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
+}
+.showAllSection.genreContainer {
+  padding-inline: 2rem;
+}
+@media only screen and (max-width: 1024px) {
+  .showAllSection {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .showAllSection {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+  }
+}/*# sourceMappingURL=ShowAll.css.map */

@@ -1,0 +1,22 @@
+@use '../../styles/scss/media' as *;
+
+.showAllSection {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
+
+  &.genreContainer {
+    padding-inline: 2rem;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+  }
+}
